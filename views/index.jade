@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  ul
+    each result in results
+      li 姓名： #{result.name}， 学号：#{result.studentId}
+  h2 操作
+  a(href="/create") 增加
+  a(href="/delete") 删除
+  a(href="/update") 修改
+  a(href="/reach") 查找
+  
